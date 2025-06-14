@@ -1,5 +1,4 @@
 <h1 align="center"> Hyprland Theme </h1>
----
 
 > ⚠️ **Note:** These dotfiles are tailored specifically for my system. They may not work out-of-the-box for others.
 
