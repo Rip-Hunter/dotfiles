@@ -1,2 +1,2 @@
 # dotfiles
-Hyprland theme config
+Hyprland theme config!!!
