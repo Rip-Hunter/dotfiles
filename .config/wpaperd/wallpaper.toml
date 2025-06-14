@@ -1,0 +1,5 @@
+[default]
+path = "/home/ivan/.config/wpaperd" 
+duration = "60m" 
+sorting = "random"
+

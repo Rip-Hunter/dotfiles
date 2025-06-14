@@ -1,0 +1,249 @@
+{
+
+  "layer": "top",
+  "position": "top", 
+  "height": 33,
+  
+  "modules-left":   ["hyprland/workspaces",     
+                    "custom/playerctl#backward",
+                    "custom/playerctl#play",
+                    "custom/playerctl#foward",
+                    "custom/playerlabel",],
+
+  "modules-center": ["clock"],
+
+  "modules-right":  ["tray", 
+                     "network",
+                     // "network#2",
+                     "hyprland/language",
+                     "backlight",
+                     "keyboard-state",
+                     "pulseaudio#input",
+                     "pulseaudio#output",
+                     // "pulseaudio#2",
+                     "battery",
+                     "custom/notification",
+                     "custom/power"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    },
+    /*"format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "",
+      "default": "",
+      "active": ""
+    }*/
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 10
+  },
+  "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇸",
+        "format-uk": "🇺🇦"
+  },      
+  "backlight":{
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃚","󰃛","󰃜","󰃝","󰃞","󰃟","󰃠"],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6 
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+  "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+  },
+  "clock": {
+    // "format": "{: %I:%M %p   %d/%m}",
+    "format": " {:%I:%M %p   %d/%m}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": " {essid}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": " Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+  },
+  // "network2": {
+  //   "format-wifi": "  {essid}",
+  //   "format-wifi-disconnected": " Disconnected",
+  //   "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+  // },
+  // "network": {
+  //     "interface": "wlp4s0",
+  //     "format-wifi": "{icon} connected",
+  //     "tooltip-format-wifi": "{essid}",
+  //     "format-linked": "󰤩 (No IP)",
+  //     "format-disconnected": "󰤨  on",
+  //     "format-disabled": "󰤭  off",
+  //     "format-icons": [ "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+  //     "on-click": "swaymsg exec \\$network-config",
+  //     "on-click-right": "$HOME/.config/waybar/scripts/toggleWifi.sh"
+  //   },
+  // "pulseaudio": {
+  //     // "scroll-step": 1, // %, can be a float
+  //     "format": "{volume}% {icon}", // {format_source}",
+  //     "format-bluetooth": "{volume}% {icon} {format_source}",
+  //     "format-bluetooth-muted": " {icon} {format_source}",
+  //     "format-muted": " {format_source}",
+  //     // "format-source": "{volume}% ",
+  //     // "format-source-muted": "",
+  //     "format-icons": {
+  //         "headphone": "",
+  //         "hands-free": "",
+  //         "headset": "",
+  //         "phone": "",
+  //         "portable": "",
+  //         "car": "",
+  //         "default": ["", "", ""]
+  //     },
+  //     "on-click": "pavucontrol"
+  // },
+  "pulseaudio#input": {
+    "format-source": " {volume}%",
+    "format-source-muted": " off",
+    "format": "{format_source}",
+    "scroll-step": 1,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "amixer sset 'Capture' toggle",
+    "on-click-middle": "pavucontrol",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +2%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -2%",
+  },
+  "pulseaudio#output": {
+    "format": "{icon} {volume}%",
+    "format-muted": " off",
+    "format-icons": {
+        "default": ["", "", ""]
+    },
+    "max-volume": 100,
+    "scroll-step": 2,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "pavucontrol",
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    // "on-click": "swaync-client -t -sw",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout -b 2"
+  },
+
+
+  "custom/playerctl#backward": {
+      "format": "󰙣 ",
+      "on-click": "playerctl previous",
+      "on-scroll-down": "swayosd-client --output-volume -1",
+      "on-scroll-up": "swayosd-client --output-volume 1"
+    },
+    "custom/playerctl#foward": {
+      "format": "󰙡 ",
+      "on-click": "playerctl next",
+      "on-scroll-down": "swayosd-client --output-volume -1",
+      "on-scroll-up": "swayosd-client --output-volume 1"
+    },
+    "custom/playerctl#play": {
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "format": "{icon}",
+      "format-icons": {
+        "Paused": "<span> </span>",
+        "Playing": "<span>󰏥 </span>",
+        "Stopped": "<span> </span>"
+      },
+      "on-click": "playerctl play-pause",
+      "on-scroll-down": "swayosd-client --output-volume -1",
+      "on-scroll-up": "swayosd-client --output-volume 1",
+      "return-type": "json"
+    },
+    "custom/playerlabel": {
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "format": "<span>󰎈 {} 󰎈</span>",
+      "max-length": 30,
+      "on-click": "",
+      "return-type": "json"
+    },
+//   "cava": {
+// //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+//     "framerate": 60,
+//     "autosens": 1,
+//     "sensitivity": 1.5,
+//     "bars": 10,
+//     "lower_cutoff_freq": 50,
+//     "higher_cutoff_freq": 10000,
+//     "method": "pulse",
+//     "source": "auto",
+//     "stereo": true,
+//     "reverse": false,
+//     "bar_delimiter": 0,
+//     "monstercat": true,
+//     "waves": false,
+//     "noise_reduction": 0.77,
+//     "input_delay": 0,
+//     "sleep_timer": 1,
+//     "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+//     "actions": {
+//       "on-click-right": "mode"
+//     }
+//   }
+
+}
+
