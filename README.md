@@ -68,7 +68,7 @@
 <br>
 
 - [**Config**](.config/wpaperd)
-- [**Wallpapers**](.config/wpaperd/Wallpapers)
+- [**Wallpapers**](Wallpapers/)
 - [**Wpaperd Github**](https://github.com/danyspin97/wpaperd)
 
 </details>
