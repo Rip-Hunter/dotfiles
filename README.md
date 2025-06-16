@@ -6,6 +6,8 @@
 
 ## 🔧 Components
 
+<img src="Demonstration/1.png" alt="rice" align="right" width="500px">
+
 <details>
 <summary><strong>Hyprland</strong></summary><br>
 <br>
@@ -78,3 +80,11 @@
 - [**Kitty Github**](https://github.com/kovidgoyal/kitty)
 
 </details>
+
+</br>
+
+## 🖼️ Gallery
+
+![gallery](Demonstration/1.png)
+![gallery](Demonstration/2.png)
+![gallery](Demonstration/3.png)
