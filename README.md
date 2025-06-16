@@ -6,6 +6,8 @@
 
 ## 🔧 Components
 
+<br>
+
 <img src="Demonstration/1.png" alt="rice" align="right" width="500px">
 
 <details>
