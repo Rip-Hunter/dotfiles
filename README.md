@@ -11,7 +11,6 @@
 
 <details>
 <summary><strong>Hyprland</strong></summary><br>
-<br>
 
 - [**Config**](.config/hypr)
 - [**Hyprland Github**](https://hyprland.org/)
@@ -20,7 +19,6 @@
 
 <details>
 <summary><strong>Waybar</strong></summary><br>
-<br>
 
 - [**Config**](.config/waybar)
 - [**Waybar Github**](https://github.com/Alexays/Waybar)
@@ -29,7 +27,6 @@
 
 <details>
 <summary><strong>Waybar</strong></summary><br>
-<br>
 
 - [**Config**](.config/waybar)
 - [**Waybar Github**](https://github.com/Alexays/Waybar)
@@ -38,7 +35,6 @@
 
 <details>
 <summary><strong>Swaync</strong></summary><br>
-<br>
 
 - [**Config**](.config/swaync)
 - [**Swaync Github**](https://github.com/ErikReider/SwayNotificationCenter)
@@ -47,7 +43,6 @@
 
 <details>
 <summary><strong>Wofi</strong></summary><br>
-<br>
 
 - [**Config**](.config/wofi)
 - [**Wofi Github**](https://github.com/SimplyCEO/wofi)
@@ -56,7 +51,6 @@
 
 <details>
 <summary><strong>Wlogout</strong></summary><br>
-<br>
 
 - [**Config**](.config/wlogout)
 - [**Wlogout Github**](https://github.com/ArtsyMacaw/wlogout)
@@ -65,7 +59,6 @@
 
 <details>
 <summary><strong>Wpaperd</strong></summary><br>
-<br>
 
 - [**Config**](.config/wpaperd)
 - [**Wallpapers**](Wallpapers/)
@@ -75,7 +68,6 @@
 
 <details>
 <summary><strong>Kitty</strong></summary><br>
-<br>
 
 - [**Config**](.config/kitty)
 - [**Kitty Github**](https://github.com/kovidgoyal/kitty)
