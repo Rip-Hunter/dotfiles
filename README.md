@@ -7,7 +7,7 @@
 ## 🔧 Components
 
 
-<img src="Demonstration/1.png" alt="rice" align="right" width="500px">
+<img src="Demonstration/1.png" alt="rice" align="right" width="550px">
 
 <details>
 <summary><strong>Hyprland</strong></summary><br>
